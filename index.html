@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="minecraftprices">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minecraft Hinnat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script src="vendors/angular-1.7.7/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body class="page-front" ng-controller="hinnat">
+
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+	  <div class="card">
+	    <div class="card-content">
+		  <div class="content">
+		    <div class="control has-icons-left has-icons-right">
+			  <input class="input is-large" type="search" ng-model="query">
+			  <span class="icon is-medium is-left">
+			    <i class="fa fa-search"></i>
+			  </span>
+			  <span class="icon is-medium is-right">
+			    <i class="fa fa-empire"></i>
+			  </span>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<section class="section maincontent">
+  <div class="container">
+    <div class="columns is-mobile is-centered">
+	  <div class="column is-half">
+	  <table class="table">
+	      <thead>
+		    <tr>
+			  <th>ID</th>
+			  <th>Nimi</th>
+			  <th>Konenimi</th>
+			  <th>Hinta</th>
+			  <th>Hinta (stack)</th>
+			  <th>Kuva</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="x in hinnat | filter:query">
+			  <td>{{ x.id }}</td>
+		      <td>{{ x.name }}</td>
+			  <td>{{ x.machinename }}</td>
+			  <td>{{ x.price }}</td>
+			  <td>{{ x.price * 64 }}</td>
+			  <td><img src="{{ x.photo }}" width="32"></td>
+		    </tr>
+		  </tbody>
+	  </table>
+	  </div>
+	</div>
+  </div>
+</section>
+
+</body>
+</html>
