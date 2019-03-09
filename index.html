@@ -51,12 +51,12 @@
 	  <table class="table">
 	      <thead class="tablehead">
 		    <tr>
-			  <th><span ng-click="sortBy('id')">ID</span><span class="sortorder" ng-show="propertyName === 'id'" ng-class="{reverse: reverse}"></span></th>
-			  <th><span ng-click="sortBy('name')">Nimi</span><span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span></th>
-			  <th><span ng-click="sortBy('machinename')">Konenimi</span><span class="sortorder" ng-show="propertyName === 'machinename'" ng-class="{reverse: reverse}"></span></th>
-			  <th><span ng-click="sortBy('price')">Hinta</span><span class="sortorder" ng-show="propertyName === 'price'" ng-class="{reverse: reverse}"></span></th>
-			  <th><span ng-click="sortBy('priceStack')">Hinta (stack)</span><span class="sortorder" ng-show="propertyName === 'priceStack'" ng-class="{reverse: reverse}"></span></th>
-			  <th><span ng-click="sortBy('photo')">Kuva</span><span class="sortorder" ng-show="propertyName === 'photo'" ng-class="{reverse: reverse}"></span></th>
+			  <th ng-click="sortBy('id')">ID<span class="sortorder" ng-show="propertyName === 'id'" ng-class="{reverse: reverse}"></span></th>
+			  <th ng-click="sortBy('name')">Nimi<span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span></th>
+			  <th ng-click="sortBy('machinename')">Konenimi<span class="sortorder" ng-show="propertyName === 'machinename'" ng-class="{reverse: reverse}"></span></th>
+			  <th ng-click="sortBy('price')">Hinta<span class="sortorder" ng-show="propertyName === 'price'" ng-class="{reverse: reverse}"></span></th>
+			  <th ng-click="sortBy('priceStack')">Hinta (stack)<span class="sortorder" ng-show="propertyName === 'priceStack'" ng-class="{reverse: reverse}"></span></th>
+			  <th ng-click="sortBy('photo')">Kuva<span class="sortorder" ng-show="propertyName === 'photo'" ng-class="{reverse: reverse}"></span></th>
 		    </tr>
 		  </thead>
 		  <tbody>
