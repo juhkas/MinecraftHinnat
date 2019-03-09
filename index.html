@@ -8,6 +8,17 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 	<script src="vendors/angular-1.7.7/angular.min.js"></script>
 	<script src="js/main.js"></script>
+	<style>
+		.sortorder:after {
+		content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+		}
+		.sortorder.reverse:after {
+		content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+		}
+		.tablehead {
+		    cursor:pointer;
+		}
+	</style>
 </head>
 <body class="page-front" ng-controller="hinnat">
 
@@ -38,18 +49,18 @@
     <div class="columns is-mobile is-centered">
 	  <div class="column is-half">
 	  <table class="table">
-	      <thead>
+	      <thead class="tablehead">
 		    <tr>
-			  <th>ID</th>
-			  <th>Nimi</th>
-			  <th>Konenimi</th>
-			  <th>Hinta</th>
-			  <th>Hinta (stack)</th>
-			  <th>Kuva</th>
+			  <th><span ng-click="sortBy('id')">ID</span><span class="sortorder" ng-show="propertyName === 'id'" ng-class="{reverse: reverse}"></span></th>
+			  <th><span ng-click="sortBy('name')">Nimi</span><span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span></th>
+			  <th><span ng-click="sortBy('machinename')">Konenimi</span><span class="sortorder" ng-show="propertyName === 'machinename'" ng-class="{reverse: reverse}"></span></th>
+			  <th><span ng-click="sortBy('price')">Hinta</span><span class="sortorder" ng-show="propertyName === 'price'" ng-class="{reverse: reverse}"></span></th>
+			  <th><span ng-click="sortBy('priceStack')">Hinta (stack)</span><span class="sortorder" ng-show="propertyName === 'priceStack'" ng-class="{reverse: reverse}"></span></th>
+			  <th><span ng-click="sortBy('photo')">Kuva</span><span class="sortorder" ng-show="propertyName === 'photo'" ng-class="{reverse: reverse}"></span></th>
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr ng-repeat="x in hinnat | filter:query">
+		    <tr ng-repeat="x in hinnat | filter:query | orderBy:propertyName:reverse">
 			  <td>{{ x.id }}</td>
 		      <td>{{ x.name }}</td>
 			  <td>{{ x.machinename }}</td>
