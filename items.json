@@ -1,5 +1,12 @@
 { "records":[ 
-  {"id":"1", "name": "Stone", "machinename":"minecraft:stone", "price":"1", "photo":"images\\stone.png"}, 
-  {"id":"4", "name": "Cobblestone", "machinename":"minecraft:cobblestone", "price":"1", "photo":"images\\cobblestone.png"},
-  {"id":"3", "name": "Dirt", "machinename":"minecraft:dirt", "price":"1", "photo":"images\\dirt.png"}
+  {"id":1, "name": "Stone", "machinename":"minecraft:stone", "price":1, "photo":"images\\stone.png"}, 
+  {"id":4, "name": "Cobblestone", "machinename":"minecraft:cobblestone", "price":1, "photo":"images\\cobblestone.png"},
+  {"id":3, "name": "Dirt", "machinename":"minecraft:dirt", "price":1, "photo":"images\\dirt.png"},
+  {"id":265, "name": "Iron (ingot)", "machinename": "minecraft:iron_ingot", "price":15, "photo":"images\\iron_(ingot).png"},
+  {"id":266, "name": "Gold (ingot)", "machinename": "minecraft:gold_ingot", "price":40, "photo":"images\\gold_(ingot).png"},
+  {"id":263, "name": "Coal", "machinename": "minecraft:coal", "price": 8, "photo":"images\\coal_(item).png"},
+  {"id":264, "name": "Diamond", "machinename": "minecraft:diamond", "price": 160, "photo":"images\\diamond_(gem).png"},
+  {"id":351.4, "name": "Lapis Lazuli", "machinename": "minecraft:lapis_lazuli", "price": 8, "photo":"images\\lapis_lazuli_(dye).png"},
+  {"id":388, "name": "Emerald", "machinename": "minecraft:emerald", "price":100, "photo":"images\\emerald.png"},
+  {"id":406, "name": "Nether Quartz", "machinename": "minecraft:nether_quartz", "price":10, "photo":"images\\nether_quartz.png"}
 ]}
